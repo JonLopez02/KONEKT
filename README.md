@@ -16,6 +16,7 @@ Honen helburua da jendea librea edota errazagoa izatea bere arazoak edo osasun m
 Ez da lagunak egiteko helburuz printzipalean baina baliteke jendea hori ere egiteko asmoz sartu ditzakeela.<br/>
 Proiektuaren parteak bananduta daude zer 25mb-ko artxibo baino handiagokoak ez du igotzen uzten. Barkatu eragozpenak.<br/>
 Blazor partea deskargatzeko klik egin hemen: https://drive.google.com/file/d/1FP2A393Elk-i7lzfuHTvyX4JJdJLqkxf/view?usp=sharing <br/>
+Horretaz aparte, query-ak eta scaffolding-aren txt-ak daukazue.<br/>
 
 GIDA<br/>
 
