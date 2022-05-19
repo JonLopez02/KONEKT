@@ -1,0 +1,40 @@
+create table users(
+id int primary key not null identity(1,1),
+username varchar(20),
+password varchar(20),
+mail varchar(MAX),
+reports int,
+externalId uniqueidentifier);
+
+create table messages(
+id int primary key not null identity(1,1),
+title varchar(50),
+message varchar(MAX),
+senderID int NOT NULL foreign key references usuarios(id),
+receiverID int NOT NULL foreign key references usuarios(id),
+externalId uniqueidentifier);
+
+insert into users(username, password, mail, reports, externalId)
+values('Blank', 'Blank1','blank@gmail.com' , 0, '96E3F299-0297-4B4E-9F73-BF41158F8360'), 
+('Yitan', 'Yitan1','yitan@gmail.com', 0, 'F857737F-EC8E-4179-95B7-DD480C9789B9'), 
+('Vivi', 'Vivi1','vivi@gmail.com', 0, '57E44FD4-6BD8-4368-A093-02BE90F8AF5D'),
+('Steiner', 'Steiner1','steiner@gmail.com', 0, '8F7F77B7-4B03-43C1-8B25-8069F6125731'),
+('Freiya', 'Freiya1','freiya@gmail.com', 0, 'A1503D2B-2867-4812-9A81-9D2E884B79A2'),
+('Vaan', 'Vaan1','vaan@gmail.com', 0, '57E44FD4-6BD8-4368-A093-02BE90F8AF5D'),
+('Yuna', 'Yuna1','yuna@gmail.com', 0, 'F857737F-EC8E-4179-95B7-DD480C9789B9'), 
+('Rikku', 'Rikku1','rikku@gmail.com', 0, 'b768526f-9181-4e25-9783-75f251c6960b'), 
+('Erik', 'Erik1','erik@gmail.com', 0, '7b58ac4a-7913-420e-9b67-90d4f3210fb9'), 
+('Sora', 'Sora1','sora@gmail.com', 0, 'e3d25aac-ae89-4fe3-ab52-1c9fcbc5f7ea'), 
+('Adol', 'Adol1','adol@gmail.com', 0, 'a43043e5-9d30-475d-9bbf-7a1345f5ba6e'), 
+('Dana', 'Dana1','dana@gmail.com', 0, 'edcdb755-f25f-4def-bf01-055e2d4a870c'), 
+('Bomo', 'Bomo1','bomo@gmail.com', 0, '717f63b1-b059-422f-ae2a-e63ce2f71a5c'), 
+('Pam', 'Pam1','pam@gmail.com', 0, '230dcb08-0539-4656-936e-342184da0a34'), 
+('Pim', 'Pim1','pim@gmail.com', 0, 'ecbffff2-c1f5-4cf1-b53d-cb1343079191'); 
+
+insert into messages(title, message, senderID, receiverID, externalId)
+values('My life', '', 1, 7, '96E3F299-0297-4B4E-9F73-BF41158F8360'), 
+('Suffering', '', 2, 8, 'F857737F-EC8E-4179-95B7-DD480C9789B9'), 
+('Enclosure', '', 3, 9, '57E44FD4-6BD8-4368-A093-02BE90F8AF5D'),
+('Just living', '', 4, 10, '8F7F77B7-4B03-43C1-8B25-8069F6125731'),
+('Passion', '', 5, 11, 'A1503D2B-2867-4812-9A81-9D2E884B79A2'),
+('Alive', '', 6, 12, '57E44FD4-6BD8-4368-A093-02BE90F8AF5D'); 
